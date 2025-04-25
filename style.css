@@ -1,0 +1,258 @@
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 20px;
+}
+
+.mascot {
+  font-size: 3rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.calculator {
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background-color: #fff;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.display {
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  font-size: 1.5rem;
+  transition: transform 0.1s ease, background-color 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.9) rotate(-1deg);
+}
+
+.theme-toggle {
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #ff8aff;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: #f648d0;
+}
+
+/* Light Mode */
+.theme-light {
+  background-color: #fff;
+  color: #000;
+}
+
+.theme-light .calculator {
+  background-color: #f9f9f9;
+}
+
+.theme-light .btn {
+  background-color: #ffdbdb;
+}
+
+/* Dark Mode */
+.theme-dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+.theme-dark .calculator {
+  background-color: #333;
+}
+
+.theme-dark .btn {
+  background-color: #444;
+}
+
+/* Pastel Theme */
+.theme-pastel {
+  background-color: #f7e7e3;
+  color: #7f7f7f;
+}
+
+.theme-pastel .calculator {
+  background-color: #fffae6;
+}
+
+.theme-pastel .btn {
+  background-color: #f2c6d3;
+}
+
+.theme-pastel .theme-toggle {
+  background-color: #b3d9ff;
+}
+
+/* Neon Theme */
+.theme-neon {
+  background-color: #111;
+  color: #00ff00;
+}
+
+.theme-neon .calculator {
+  background-color: #222;
+}
+
+.theme-neon .btn {
+  background-color: #00ff00;
+  color: #111;
+}
+
+.theme-neon .theme-toggle {
+  background-color: #ff00ff;
+}
+
+/* Retro Theme */
+.theme-retro {
+  background-color: #fff1a1;
+  color: #333;
+}
+
+.theme-retro .calculator {
+  background-color: #ffcc00;
+}
+
+.theme-retro .btn {
+  background-color: #ff0057;
+  color: white;
+}
+
+.theme-retro .theme-toggle {
+  background-color: #ff5733;
+}
+
+/* Dark Purple Theme */
+.theme-purple {
+  background-color: #2d0d6d;
+  color: #f1e0ff;
+}
+
+.theme-purple .calculator {
+  background-color: #3e1e94;
+}
+
+.theme-purple .btn {
+  background-color: #9b4d9f;
+  color: white;
+}
+
+.theme-purple .theme-toggle {
+  background-color: #6a2a9d;
+}
+
+.theme-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.theme-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.theme-buttons button:hover {
+  transform: scale(1.1);
+  background-color: #ddd;
+}
+
+.theme-toggle.active {
+  outline: 3px solid gold;
+  background-color: #fff3;
+  box-shadow: 0 0 10px gold;
+  transition: 0.3s ease;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+}
+
+/* Neon active */
+.theme-neon .theme-buttons button.active {
+    box-shadow: 0 0 15px 5px #00ffcc;
+    background-color: #00ffcc;
+    color: #111;
+  }
+  
+  /* Pastel active */
+  .theme-pastel .theme-buttons button.active {
+    box-shadow: 0 0 10px 3px #f2a9c3;
+    background-color: #f2c6d3;
+    color: #7f7f7f;
+  }
+  
+  /* Retro active */
+  .theme-retro .theme-buttons button.active {
+    box-shadow: 0 0 12px 4px #ffae00;
+    background-color: #ffcc00;
+    color: #333;
+  }
+  
+  /* Purple active */
+  .theme-purple .theme-buttons button.active {
+    box-shadow: 0 0 12px 4px #c77dff;
+    background-color: #9b4d9f;
+    color: white;
+  }
+
