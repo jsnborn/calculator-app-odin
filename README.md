@@ -7,7 +7,7 @@ Basic Calculator Functions: Performs simple arithmetic operations such as additi
 Installation
 Clone the repository:
 
-git clone https://github.com/your-username/calculator-theme-toggle.git
+git clone https://github.com/jsnborn/calculator-app-odin.git
 
 Navigate into the project directory:
 
