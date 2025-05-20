@@ -1,4 +1,7 @@
 /* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+
 body {
   font-family: "Arial", sans-serif;
   transition: background-color 0.3s, color 0.3s;
@@ -15,6 +18,7 @@ body {
 .mascot {
   font-size: 3rem;
   animation: float 3s ease-in-out infinite;
+  font-family: 'Orbitron', sans-serif;
 }
 
 @keyframes float {
